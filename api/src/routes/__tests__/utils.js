@@ -3,11 +3,19 @@
 import {getTokenFromHeader} from '../utils'
 
 test('returns null if there is no token', () => {
-  // TODO
+    const req = {headers: {authorization: 'Token'}}
+    const result = getTokenFromHeader(req)
+
+    expect(result).toBeNull()
 })
 
 test('returns the token from the headers', () => {
-  // TODO
+    const token = 'XYZ'
+
+    const req = {headers: {authorization: 'Token '+ token}}
+    const result = getTokenFromHeader(req)
+
+    expect(result).toBe(token)
 })
 
 // implement arrayify tests
@@ -17,8 +25,8 @@ test('returns the token from the headers', () => {
 http://ws.kcd.im/?ws=Testing&e=API%20Unit&em=
 */
 test('I submitted my elaboration and feedback', () => {
-  const submitted = false // change this when you've submitted!
-  expect(true).toBe(submitted)
+    const submitted = true // change this when you've submitted!
+    expect(true).toBe(submitted)
 })
 ////////////////////////////////
 
