@@ -35,3 +35,8 @@ test('I submitted my elaboration and feedback', () => {
 // If you get this far, try adding a few more tests,
 // then file a pull request to add them to the extra credit!
 // Learn more here: http://kcd.im/asts-workshop-contributing
+
+// TODO add test case: there is no request
+// TODO add test case: there is no request.authorization
+// TODO added test case: there is no Token header in authorization
+// TODO added test case: there is no value for the Token header in authorization
