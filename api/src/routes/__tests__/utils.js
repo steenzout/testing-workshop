@@ -3,7 +3,7 @@
 import {getTokenFromHeader} from '../utils'
 
 test('returns null if there is no token', () => {
-    const req = {headers: {authorization: 'Token'}}
+    const req = {headers: {}}
     const result = getTokenFromHeader(req)
 
     expect(result).toBeNull()
@@ -12,7 +12,7 @@ test('returns null if there is no token', () => {
 test('returns the token from the headers', () => {
     const token = 'XYZ'
 
-    const req = {headers: {authorization: 'Token '+ token}}
+    const req = {headers: {authorization: `Token ${token}`}}
     const result = getTokenFromHeader(req)
 
     expect(result).toBe(token)
