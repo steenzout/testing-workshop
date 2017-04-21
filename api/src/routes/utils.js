@@ -2,9 +2,9 @@ export {arrayify}
 export {getTokenFromHeader}
 
 function arrayify(arg) {
-  if (arg instanceof Array) {
+  if (Array.isArray(arg)) {
     return arg
-  } else if (arg === undefined) {
+  } else if (typeof arg === 'undefined') {
     return []
   } else {
       return [arg]
