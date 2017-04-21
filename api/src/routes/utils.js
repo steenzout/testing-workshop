@@ -2,6 +2,8 @@ export {arrayify}
 export {getTokenFromHeader}
 
 function arrayify(arg) {
+  // arg = []
+  // Array.isArray(arg) ? arg : [arg]
   if (Array.isArray(arg)) {
     return arg
   } else if (typeof arg === 'undefined') {
