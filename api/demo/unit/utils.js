@@ -6,3 +6,7 @@ function makeMeASandwich(req) {
   }
   return req.query.sandwich
 }
+
+function sum() {
+  return 0
+}

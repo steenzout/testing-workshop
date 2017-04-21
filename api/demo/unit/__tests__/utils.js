@@ -1,3 +1,7 @@
+// api/demo/unit/__tests__/utils.js
+
+import {sum} from '../utils'
+
 import {makeMeASandwich} from '../utils'
 
 test('returns null when sandwich is not a string', () => {
@@ -15,3 +19,22 @@ test('returns null when sandwich is a string', () => {
 
     expect(result).toBe(sandwich)
 })
+
+// sum(1, 2, 3, 4, 5)
+
+test('when called with nothing returns 0', () => {
+    const result = sum()
+    expect(result).toBe(0)
+}
+
+// test when called with a single number
+test('when called with a single number', () => {
+    const result = sum(3)
+    expect(result).toBe(3)
+}
+
+// test when called with multiple numbers
+test(' when called with multiple numbers', () => {
+    const result = sum(1, 2, 3, 4)
+    expect(result).toBe(10)
+}
