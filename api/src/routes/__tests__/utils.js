@@ -27,13 +27,15 @@ test('when arrayify called with nothing it returns an empty array', () => {
 })
 
 test('when arrayify called with an integer an array with that integer', () => {
-    const result = arrayify(3)
-    expect(result).toEqual([3])
+    const input = 3
+    const result = arrayify(input)
+    expect(result).toEqual([input])
 })
 
 test('when arrayify called with an array it will return that array', () => {
-    const result = arrayify([3])
-    expect(result).toEqual([3])
+    const input = [3]
+    const result = arrayify(input)
+    expect(result).toEqual(input)
 })
 
 //////// Elaboration & Feedback /////////
