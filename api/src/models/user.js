@@ -81,6 +81,7 @@ function getUserSchema() {
       username: this.username,
       bio: this.bio,
       following: user ? user.isFollowing(this._id) : false,
+      image: this.image,
     }
   }
 

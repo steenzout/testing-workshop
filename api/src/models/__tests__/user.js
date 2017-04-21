@@ -43,6 +43,25 @@ test('shows the user as following based on the given user', () => {
   expect(profileJSON.following).toBe(true)
 })
 
+test('does not return image if none defined', () => {
+    const {user: otherUser} = generateUser()
+    const {user} = generateUser()
+    user.image = undefined
+
+    const profileJSON = user.toProfileJSONFor(otherUser)
+    expect(profileJSON.image).toBe(undefined)
+})
+
+test('shows the user image when set', () => {
+    const {user: otherUser} = generateUser()
+    const input = 'a.jpg'
+    const {user} = generateUser()
+    user.image = input
+
+    const profileJSON = user.toProfileJSONFor(otherUser)
+    expect(profileJSON.image).toBe(input)
+})
+
 test('can favorite an article', () => {
   const {user} = generateUser()
   const articleId = mongoose.Types.ObjectId()
