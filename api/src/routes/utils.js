@@ -1,4 +1,15 @@
+export {arrayify}
 export {getTokenFromHeader}
+
+function arrayify(arg) {
+  if (arg instanceof Array) {
+    return arg
+  } else if (arg === undefined) {
+    return []
+  } else {
+      return [arg]
+  }
+}
 
 function getTokenFromHeader(req) {
   if (
@@ -9,4 +20,3 @@ function getTokenFromHeader(req) {
   }
   return null
 }
-

@@ -1,5 +1,6 @@
 // Your task: Write these unit tests :)
 // eslint-disable-next-line no-unused-vars
+import {arrayify} from '../utils'
 import {getTokenFromHeader} from '../utils'
 
 test('returns null if there is no token', () => {
@@ -20,12 +21,27 @@ test('returns the token from the headers', () => {
 
 // implement arrayify tests
 
+test('when arrayify called with nothing it returns an empty array', () => {
+    const result = arrayify()
+    expect(result).toEqual([])
+})
+
+test('when arrayify called with an integer an array with that integer', () => {
+    const result = arrayify(3)
+    expect(result).toEqual([3])
+})
+
+test('when arrayify called with an array it will return that array', () => {
+    const result = arrayify([3])
+    expect(result).toEqual([3])
+})
+
 //////// Elaboration & Feedback /////////
 /*
 http://ws.kcd.im/?ws=Testing&e=API%20Unit&em=
 */
 test('I submitted my elaboration and feedback', () => {
-    const submitted = true // change this when you've submitted!
+    const submitted = true
     expect(true).toBe(submitted)
 })
 ////////////////////////////////
